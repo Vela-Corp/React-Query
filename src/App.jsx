@@ -1,10 +1,18 @@
-
-
+import { Route, Routes } from "react-router-dom"
+import Products from "./pages/products"
+import Add from "./pages/Add"
+import Update from "./pages/Update"
 function App() {
 
   return (
     <>
-      <h1 className="text-red-500">Long</h1>
+
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route path="/add" element={<Add />} />
+        <Route path="/update/:id" element={<Update />} />
+      </Routes>
+
     </>
   )
 }

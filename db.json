@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sam Sung",
+      "price": 1000,
+      "description": "Sam Sung1"
+    },
+    {
+      "name": "ẻgtry",
+      "price": "ểtyju",
+      "description": "ửetrytuyi",
+      "id": 4
+    },
+    {
+      "name": "ẻgtry",
+      "price": "ểtyju",
+      "description": "ửetrytuyi",
+      "id": 5
+    },
+    {
+      "name": "Đỗ Thành Long",
+      "price": "1234",
+      "description": "23456",
+      "id": 6
+    },
+    {
+      "name": "Đỗ Thành Long2222",
+      "price": "4567",
+      "description": "6453",
+      "id": 7
+    },
+    {
+      "name": "hahafff",
+      "price": "4567",
+      "description": "54",
+      "id": 8
+    }
+  ]
+}
