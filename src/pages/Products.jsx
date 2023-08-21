@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 import { delteOneProduct, getProducts } from "../api/products"
-import { useMutation, useQuery, useQueryClient } from "react-query"
-import { useEffect, useState } from "react"
+import { useMutation, useQuery } from "react-query"
+import { useState } from "react"
 const Products = () => {
-    const queryClient = useQueryClient();
+    // const queryClient = useQueryClient();
     const [searchValue, setSearchValue] = useState("")
     const { isLoading, data, refetch } = useQuery(["products", searchValue], () => getProducts(searchValue), {
     })

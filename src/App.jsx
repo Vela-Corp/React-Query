@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
-import Products from "./pages/products"
-import Add from "./pages/Add"
-import Update from "./pages/Update"
+import Products from "./pages/Products.jsx"
+import Add from "./pages/Add.jsx"
+import Update from "./pages/Update.jsx"
 function App() {
 
   return (
