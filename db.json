@@ -1,34 +1,10 @@
 {
   "products": [
     {
-      "name": "Long",
-      "price": "10000",
-      "description": "Mo ta 1",
-      "id": 5
-    },
-    {
       "name": "Đỗ Thành Long",
-      "price": "1234",
-      "description": "23456",
-      "id": 6
-    },
-    {
-      "name": "Đỗ Thành Long2222",
       "price": "4567",
       "description": "6453",
-      "id": 7
-    },
-    {
-      "name": "Test1",
-      "price": "45671",
-      "description": "100000",
-      "id": 8
-    },
-    {
-      "name": "Đỗ Thành Long",
-      "price": "1111",
-      "description": "22222",
-      "id": 9
+      "id": 1
     }
   ]
 }

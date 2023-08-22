@@ -4,6 +4,7 @@ import { useMutation, useQuery, useQueryClient } from "react-query"
 import { getOneProduct, updateProduct } from "../api/products"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useMemo } from "react"
+import { ToastContainer, toast } from "react-toastify"
 const Update = () => {
     const queryClient = useQueryClient();
     const navigate = useNavigate()
@@ -16,6 +17,7 @@ const Update = () => {
     })
     const { mutate } = useMutation("updateProduct", updateProduct, {
         onSuccess: () => {
+            toast.success("Cập nhật thành công")
             queryClient.invalidateQueries("products")
         }
     })
@@ -28,7 +30,7 @@ const Update = () => {
     }, [data?.data])
     return (
         <>
-
+            <ToastContainer />
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="w-1/3 mx-auto mt-10">
                     <div className="mb-6">

@@ -9,7 +9,6 @@ const Add = () => {
     const { mutate } = useMutation("addProduct", addProduct, {
         onSuccess: () => {
             queryClient.invalidateQueries("products")
-
         }
     })
     const onSubmit = (data) => {
@@ -18,7 +17,6 @@ const Add = () => {
     }
     return (
         <>
-
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="w-1/3 mx-auto mt-10">
                     <div className="mb-6">

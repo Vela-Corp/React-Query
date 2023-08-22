@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { delteOneProduct, getProducts } from "../api/products"
 import { useMutation, useQuery } from "react-query"
 import { useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 const Products = () => {
     // const queryClient = useQueryClient();
     const [searchValue, setSearchValue] = useState("")
@@ -9,17 +11,16 @@ const Products = () => {
     })
     const { mutate } = useMutation("removeProduct", delteOneProduct, {
         onSuccess: () => {
+            toast.success("Xóa thành công")
             refetch()
         }
     })
     const handlDeleteProduct = (id) => {
         mutate(id)
     }
-    // useEffect(() => {
-    //     refetch()
-    // }, [searchValue])
     return (
         <>
+            <ToastContainer />
             <div className="flex flex-col py-5">
                 <div className="w-full flex items-center justify-between px-10">
                     <input value={searchValue} className=" border-2 w-64 h-9 rounded-md border-blue-500 outline-none pl-2" type="text" name="" id="" placeholder="Search..." onChange={(e) => setSearchValue(e.target.value)} />
@@ -61,7 +62,7 @@ const Products = () => {
                                     )
                                     }
                                     {
-                                        data && data.data?.map((item, index) =>
+                                        data && data.data.length ? data.data?.map((item, index) =>
                                             <>
                                                 <tr key={index} className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
                                                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{index + 1}</td>
@@ -81,7 +82,7 @@ const Products = () => {
                                                 </tr>
                                             </>
                                         )
-
+                                            : null
                                     }
 
 
